@@ -1,3 +1,75 @@
-*{margin:0;padding:0;box-sizing:border-box}html{font-size:16px}.main{position:relative;height:100vh}.dock{display:block;position:relative;float:left;width:200px;height:200px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);background-color:rgba(0,0,255,0.5)}.item{position:relative;width:100px;height:100px;top:50%;left:50%;border-radius:50%;background-color:rgba(255,0,0,0.5);cursor:pointer;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);z-index:999}.target{display:block;position:relative;float:right;width:200px;height:200px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:-1;background-color:rgba(255,255,0,0.5)}.target__image{width:200px;height:200px}.target__image--dropped{background:yellow}
+/* Imports */
+/* Mixins & variables */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=style.css.map */
+html {
+  font-size: 16px; }
+
+body {
+  font-family: "Montserrat", Arial;
+  font-size: 16px; }
+
+h1 {
+  font-size: 3rem;
+  text-align: center; }
+
+.main {
+  position: relative;
+  height: 100vh; }
+
+.audio-dock {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+  background: #3498db; }
+
+.audio-target-container {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  float: left; }
+  .audio-target-container .audio-target {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    height: 80%;
+    max-height: 600px;
+    fill: #000032; }
+
+.dock {
+  display: block;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: rgba(0, 0, 255, 0.5); }
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 999; }
+
+.target__image--dropped {
+  background: yellow; }
+
+#audio-target__circle {
+  fill: #1F1F1F; }

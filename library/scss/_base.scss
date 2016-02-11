@@ -10,9 +10,43 @@ html {
 	font-size: 16px;
 }
 
-//@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+	font-family: "Montserrat", Arial;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
 
 .main {
   position: relative;
   height: 100vh;
+}
+
+.audio-dock {
+	position: relative;
+	width: 20%;
+	height: 100%;
+	float: left;
+	background: rgba(#3498db, 50%);
+}
+
+.audio-target-container {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	float: left;
+
+	.audio-target {
+		@include h-a;
+		width: 80%;
+		max-width: 600px;
+		height: 80%;
+		max-height: 600px;
+		fill: #000032;
+	}
 }
