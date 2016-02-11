@@ -16,19 +16,20 @@ $(function() {
       }  
     }); 
   
-  	var item   = '.audio-block',
+  	var item   = '.audio-dock--left  .audio-block', 
   	    target = ".audio-target-container",
   	    item_size = 75, 
 		top = (780/2 - (75/2)),
 		left = (1440/2 - (75/2)),
-
 		top1 	= top - item_size,
         left1	= left - item_size; 
 
-    stop: function() {
-    	$( this ).animate({ top: top + "px", left: left + "px" });
-    	$(body).trigger('audio-selected', ["bass"]);
- 	}  
+    $(item).draggable({   
+    	stop: function() {
+    		$( this ).animate({ top: (top/4) + "px", left: left + "px" });
+    		$(body).trigger('audio-selected', ["bass"]);
+ 		}  
+ 	}); 
 
   	
 }); 
