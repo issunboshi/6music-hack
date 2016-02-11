@@ -26,21 +26,22 @@ $(function() {
                width = target.width(),
                height = target.height(),
           
-               centerX = offset.left + (width / 2),
-               centerY = offset.top + (height / 2);
+               centerX = (width / 2),
+               centerY = (height / 2);
           
-          console.log(width);
+          console.log(offset);
           
           var item = $(this),
-              item_height = target.height();
+              item_height = item.height();
               
           
                //console.log("X position " + centerX);
                //console.log("Y position " + centerY);
-               //console.log("item height " + item_height);
+               console.log("item height " + item_height);
                //console.log("item height /25 " + item_height/25);
           
-           $(this).animate({ left: centerX, top: (item_height/2) });
+           $(this).animate({ left: (centerX - (item_height/2)), top: (centerY/2) });
+           //$(this).animate({ left: (centerX/2 - item_height), top: (centerY/2 - item_height) });
         } 
           
          //drag: function( event, ui ) {
