@@ -19,20 +19,25 @@ function audioAPI () {
     });
 
 
-    function playSound(event) {
-        var selectedEl = $(event.currentTarget);
-            ref = selectedEl.data('spriteName');
-
+    function playSound(event, ref) {
         sounds.play(ref);
+        sounds.fade(0, 1, 400, ref, function() {
+            return;
+        });
     }
 
-    function stopSound(event) {
-        selectedEl = $(event.currentTarget).data('spriteName');
+    function stopSound(event, ref) {
+        sounds.stop(ref);
     }
 
 
     // Listen for dom interaction
-    $(document).on('click', '.button', playSound);
+    // $('body').on('audio-triggered', playSound);
+    $('body').on('audio-triggered', function(event, param) {
+        console.log(event)
+    });
+
+    $('body').trigger('audio-triggered', ['loPad']);
 
 }
 
