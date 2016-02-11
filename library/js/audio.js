@@ -3,7 +3,7 @@ function audioAPI () {
         methods;
 
     sounds = new Howl({
-      urls: ['/library/audio/mergedtracks.mp3'],
+      urls: ['../library/audio/mergedtracks.mp3'],
       sprite: {
           bass: [0, 64000],
           ep: [64000, 128000],
@@ -20,24 +20,26 @@ function audioAPI () {
 
 
     function playSound(event, ref) {
-        sounds.play(ref);
-        sounds.fade(0, 1, 400, ref, function() {
-            return;
-        });
+        var audioRef = ref || $(event.currentTarget).data('spriteName');
+
+        sounds.play(audioRef);
+        sounds.fade(0, 1, 400, null, audioRef);
     }
 
     function stopSound(event, ref) {
+        sounds.fade(1, 0, 400, null, ref);
         sounds.stop(ref);
     }
 
 
     // Listen for dom interaction
-    // $('body').on('audio-triggered', playSound);
-    $('body').on('audio-triggered', function(event, param) {
-        console.log(event)
+    $('body').on('audio-selected', function(event, param) {
+        playSound(event, spriteName)
     });
 
-    $('body').trigger('audio-triggered', ['loPad']);
+    $(document).on('click', '.button', function(event) {
+        playSound(event);
+    });
 
 }
 
