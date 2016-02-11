@@ -35,12 +35,12 @@ $(function() {
               item_height = target.height();
               
           
-               console.log("X position " + centerX);
-               console.log("Y position " + centerY);
-               console.log("item height " + item_height);
-               console.log("item height /25 " + item_height/25);
+               //console.log("X position " + centerX);
+               //console.log("Y position " + centerY);
+               //console.log("item height " + item_height);
+               //console.log("item height /25 " + item_height/25);
           
-           $(this).animate({ left: centerX - (item_height/25), top: (item_height/2) });
+           $(this).animate({ left: centerX, top: (item_height/2) });
         } 
           
          //drag: function( event, ui ) {
