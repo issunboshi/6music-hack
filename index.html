@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width">
 	<title>6 Music Hack</title>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+    <script src="library/js/jquery-2.2.0.js"></script>
+    <script src="library/js/jquery-ui/jquery-ui.js"></script>
 	<script src="library/js/howler.js"></script>
 	<script src="/library/js/audio.js"></script>
 	<script src="library/js/ui.js"></script>
@@ -18,10 +20,45 @@
 </head>
 <body>
 	<main class="main">
-    	<h1>Heli Music</h1>
-		<div class="dock"></div>
-		<div class="item"></div>
-		<div class="target"></div>
+		<div class="audio-dock audio-dock--left">
+			<svg class="audio-block audio-block--hexa" width="88px" height="100px" viewBox="0 0 88 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+			    <title>hexa</title>
+			    <desc>Created with Sketch.</desc>
+			    <defs></defs>
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+			        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-304.000000, -35.000000)" fill="#D8D8D8">
+			            <polygon id="hexa" sketch:type="MSShapeGroup" points="348 35 391.30127 60 391.30127 110 348 135 304.69873 110 304.69873 60 "></polygon>
+			        </g>
+			    </g>
+			</svg>
+		</div>
+
+		<section class="audio-target-container">
+			<h1>Heli Music</h1>
+			<svg class="audio-target" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+			    <title>circle</title>
+			    <desc>Created with Sketch.</desc>
+			    <defs></defs>
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="" fill-rule="evenodd" sketch:type="MSPage">
+			        <g id="audio-target__circle" sketch:type="MSArtboardGroup" transform="translate(-171.000000, -35.000000)" fill="#D8D8D8">
+			            <circle id="circle" sketch:type="MSShapeGroup" cx="221" cy="85" r="50"></circle>
+			        </g>
+			    </g>
+			</svg>
+		</section>
+
+		<div class="audio-dock audio-dock--right">
+			<svg class="audio-block audio-block--hexa" width="88px" height="100px" viewBox="0 0 88 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+			    <title>hexa</title>
+			    <desc>Created with Sketch.</desc>
+			    <defs></defs>
+			    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+			        <g id="Artboard-1" sketch:type="MSArtboardGroup" transform="translate(-304.000000, -35.000000)" fill="#D8D8D8">
+			            <polygon id="hexa" sketch:type="MSShapeGroup" points="348 35 391.30127 60 391.30127 110 348 135 304.69873 110 304.69873 60 "></polygon>
+			        </g>
+			    </g>
+			</svg>
+		</div>	
 	</main>
 </body>
 </html>

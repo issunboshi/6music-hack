@@ -24,25 +24,26 @@
 @mixin v-a {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 @mixin v-r {
   position: relative;
   top: 0%;
-  -webkit-transform: translateY(-0%);
-  -ms-transform: translateY(-0%);
   transform: translateY(-0%);
 }
 
 @mixin h-a {
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+@mixin hv-a {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 @mixin clearfix {

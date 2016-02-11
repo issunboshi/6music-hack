@@ -1,27 +1,27 @@
 // Snapping back to start location
-//$('.item').draggable({ revert: true });
+//$('.audio-block').draggable({ revert: true });
 
 //Adding dropable class
 $(function() {
-  $('.item').draggable({snap: ".target" });
-  $( ".target" ).droppable({
+  $('.audio-block').draggable({snap: ".audio-target" });
+  $( ".audio-target" ).droppable({
     drop: function( event, ui ) {
       $( this ).addClass( "target__image--dropped" );
     }  
   });  
   
-    $( ".dock" ).droppable({
+    $( ".audio-dock" ).droppable({
       drop: function( event, ui ) {
-        $(".target").removeClass( "target__image--dropped"); 
+        $(".audio-target").removeClass( "target__image--dropped"); 
       }  
     }); 
   
   
-  $('.item').draggable({
+  $('.audio-block').draggable({
     
         stop: function() {
 
-          var  target = $(".target"),
+          var  target = $(".audio-target"),
                offset = target.offset(),
                width = target.width(),
                height = target.height(),
