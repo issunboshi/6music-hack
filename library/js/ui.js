@@ -16,31 +16,24 @@ $(function() {
       }  
     }); 
   
-  
-  $('.audio-block').draggable({
+  	var item   = '.audio-block',
+  	    target = ".audio-target-container", 
+		width = $(target).width(),
+		height = $(target).height(),
+		top = $(target).offset().top,
+		left = $(target).offset().left,
+		
+		cntrLeft = (width / 2) - ($(item).width() / 2) + left,
+		cntrTop = (height / 2) - ($(item).height() / 2) + top;
+
+		console.log(cntrLeft);
+
+  $( item ).draggable({
     
         stop: function() {
-
-          var  target = $(".audio-target"),
-               offset = target.offset(),
-               width = target.width(),
-               height = target.height(),
-          
-               centerX = (width / 2),
-               centerY = (height / 2);
-          
-          console.log(offset);
-          
-          var item = $(this),
-              item_height = item.height();
-              
-          
-               //console.log("X position " + centerX);
-               //console.log("Y position " + centerY);
-               console.log("item height " + item_height);
-               //console.log("item height /25 " + item_height/25);
-          
-           $(this).animate({ left: (centerX - (item_height/2)), top: (centerY/2) });
+           	
+           $( item ).animate({ top: cntrTop + "px", left: cntrLeft + "px" });
+           //$(this).animate({ left: (centerX - (item_height/2)), top: (centerY/2) });
            //$(this).animate({ left: (centerX/2 - item_height), top: (centerY/2 - item_height) });
         } 
           
