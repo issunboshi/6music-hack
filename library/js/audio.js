@@ -20,15 +20,19 @@ function audioAPI () {
 
 
     function playSound(event) {
-        var ref = 'bass';
+        var selectedEl = $(event.currentTarget);
+            ref = selectedEl.data('spriteName');
 
         sounds.play(ref);
-        console.log(ref);
+    }
+
+    function stopSound(event) {
+        selectedEl = $(event.currentTarget).data('spriteName');
     }
 
 
     // Listen for dom interaction
-    $(document).on('click', playSound);
+    $(document).on('click', '.button', playSound);
 
 }
 
