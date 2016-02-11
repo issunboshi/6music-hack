@@ -1,0 +1,17 @@
+{
+  "name": "project",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-imageoptim": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-notify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-newer": "latest"
+  }
+}
