@@ -1,0 +1,14 @@
+.target {
+  @include element(right);
+  z-index: -1;
+  background-color: rgba(yellow, 0.5);
+}
+
+.target__image {
+  width: 200px;
+  height: 200px;
+}
+
+.target__image--dropped {
+  background: yellow;
+}
