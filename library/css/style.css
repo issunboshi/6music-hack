@@ -1,6 +1,5 @@
 /* Imports */
 /* Mixins & variables */
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   margin: 0;
   padding: 0;
@@ -39,9 +38,11 @@ h1 {
   background: yellow; }
   .audio-target-container .audio-target {
     position: relative;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    position: absolute;
     width: 80%;
     max-width: 600px;
     height: 80%;
@@ -101,6 +102,9 @@ h1 {
 
 .loPad {
   background: #8e44ad; }
+
+.audio-target-container {
+  background-color: #000; }
 
 .target__image--dropped {
   background: yellow; }
