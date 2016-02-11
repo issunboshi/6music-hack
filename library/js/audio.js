@@ -1,6 +1,7 @@
 function audioAPI () {
     var sounds,
         methods;
+
     sounds = new Howl({
       urls: ['/library/audio/mergedtracks.mp3'],
       sprite: {
@@ -14,27 +15,18 @@ function audioAPI () {
           loPad: [448000, 512000],
           sineHi: [512000, 576000]
       },
-      loop: true,
+      loop: true
     });
 
 
-    // methods: {
-    //     playClick: function (sprite) {
-    //         sound.play(sprite);
-    //     },
-    //     stopClick: function () {
-    //         sound.unload();
-    //     },
-    //     toggleLoop: function() {
-    //         sound.loop(true);
-    //     }
-    // }
+    function playSound(spriteRef) {
+        sounds.play(spriteRef);
+        console.log($(document));
+    }
+
 
     // Listen for dom interaction
-    $('body').on('click', function() {
-        sounds.play('flutes1');
-        console.log('triggered');
-    });
+    $(document).on('click', playSound);
 
 }
 
