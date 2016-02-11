@@ -28,7 +28,7 @@ $(function() {
     for (var i = 1; i >= 8; i++) {
     	$( item + "--" + i ).draggable({
   		    stop: function() {
-  		       $( this ).animate({ top: (top + "--" + i) + "px", left: (left + "--" + i) + "px" });
+  		       $( this ).animate({ top: (top + i) + "px", left: (left + i) + "px" });
   		    } 
   		});
     };    
