@@ -19,9 +19,11 @@ function audioAPI () {
     });
 
 
-    function playSound(spriteRef) {
-        sounds.play(spriteRef);
-        console.log($(document));
+    function playSound(event) {
+        var ref = 'bass';
+
+        sounds.play(ref);
+        console.log(ref);
     }
 
 
