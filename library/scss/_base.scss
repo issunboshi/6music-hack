@@ -25,7 +25,7 @@ h1 {
 .main {
   position: relative;
   height: 100vh;
-  background: red;
+  background: #333333;
 }
 
 .audio-dock {
@@ -33,12 +33,12 @@ h1 {
 	width: 20%;
 	height: 100%;
 	float: left;
-	background: rgba(#3498db, 50%);
+	// background: rgba(#3498db, 50%);
 }
 
 .audio-dock-cell {
 	height: 25vh;
-	border: 1px solid blue;
+	// border: 1px solid blue;
 }
 
 .audio-target-container {

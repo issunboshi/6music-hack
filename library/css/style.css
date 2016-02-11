@@ -19,18 +19,16 @@ h1 {
 .main {
   position: relative;
   height: 100vh;
-  background: red; }
+  background: #333333; }
 
 .audio-dock {
   position: relative;
   width: 20%;
   height: 100%;
-  float: left;
-  background: #3498db; }
+  float: left; }
 
 .audio-dock-cell {
-  height: 25vh;
-  border: 1px solid blue; }
+  height: 25vh; }
 
 .audio-target-container {
   position: relative;
@@ -103,6 +101,9 @@ h1 {
 
 .loPad {
   background: #8e44ad; }
+
+.audio-target-container {
+  background-color: #000; }
 
 .target__image--dropped {
   background: yellow; }
