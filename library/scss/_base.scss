@@ -48,7 +48,8 @@ h1 {
 	float: left;
 
 	.audio-target {
-		@include h-a;
+		@include hv-a;
+		position: absolute;
 		width: 80%;
 		max-width: 600px;
 		height: 80%;

@@ -17,29 +17,21 @@ $(function() {
     }); 
   
   	var item   = '.audio-block',
-  	    target = ".audio-target-container", 
-		width = $(target).width(),
-		height = $(target).height(),
-		top = $(target).offset().top,
-		left = $(target).offset().left,
-		
-		cntrLeft = (width / 2) - ($(item).width() / 2) + left,
-		cntrTop = (height / 2) - ($(item).height() / 2) + top;
+  	    target = ".audio-target-container",
+  	    item_size = 75, 
+		top = (780/2 - (75/2)),
+		left = (1440/2 - (75/2));
 
-		console.log(cntrLeft);
+		top1 	= top - item_size;
+        left1	= left - item_size;
 
-  $( item ).draggable({
-    
-        stop: function() {
-           	
-           $( item ).animate({ top: cntrTop + "px", left: cntrLeft + "px" });
-           //$(this).animate({ left: (centerX - (item_height/2)), top: (centerY/2) });
-           //$(this).animate({ left: (centerX/2 - item_height), top: (centerY/2 - item_height) });
-        } 
-          
-         //drag: function( event, ui ) {
-         //  ui.position.left = centerX;
-         //}  
-      //}
-  });
+    for (var i = 1; i >= 8; i++) {
+    	$( item + "--" + i ).draggable({
+  		    stop: function() {
+  		       $( this ).animate({ top: (top + "--" + i) + "px", left: (left + "--" + i) + "px" });
+  		    } 
+  		});
+    };    
+
+  	
 }); 
