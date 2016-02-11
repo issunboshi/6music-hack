@@ -33,7 +33,8 @@ function audioAPI () {
 
 
     // Listen for dom interaction
-    $('body').on('audio-selected', function(event, param) {
+    $(document).on('audio-selected', function(event, spriteName) {
+        console.log(event);
         playSound(event, spriteName)
     });
 
