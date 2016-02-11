@@ -35,7 +35,8 @@ h1 {
   position: relative;
   width: 60%;
   height: 100%;
-  float: left; }
+  float: left;
+  background: yellow; }
   .audio-target-container .audio-target {
     position: relative;
     left: 50%;
