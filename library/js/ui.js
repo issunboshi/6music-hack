@@ -16,7 +16,8 @@ $(function() {
       }  
     }); 
   
-  	var item   = '.audio-dock--left  .audio-block', 
+  	var item   = '.audio-dock--left .audio-dock-cell .audio-block', 
+  		item_r  = '.audio-dock--right .audio-dock-cell .audio-block', 
   	    target = ".audio-target-container",
   	    item_size = 75, 
 		top = (780/2 - (75/2)),
@@ -30,6 +31,13 @@ $(function() {
     		$(body).trigger('audio-selected', ["bass"]);
  		}  
  	}); 
+
+ 	$(item_r).draggable({   
+    	stop: function() {
+    		$( this ).animate({ top: (top/4) + "px", right: left + "px" });
+    		$(body).trigger('audio-selected', ["bass"]);
+ 		}  
+ 	});
 
   	
 }); 
