@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 
 		sass: {
 			options: {
-				style: "compressed",
+				style: "nested",
 			},
 			dist: {									//whole dir
 				files: [{
@@ -20,20 +20,19 @@ module.exports = function (grunt) {
 					dest: "library/css",
 					ext: ".css"
 				}]
+			},
+			options: {
+				sourcemap: false
 			}	
-			//files: {
-			//	src: "library/scss/custom-style.scss",	//single files
-			//	dest: "library/css/custom-style.css"
-			//}
 		},
 
 		autoprefixer: {
 			single_file: {
 				options: {
 			  		browsers: ['last 2 versions'],
-			  		map: {
-		        		inline: false
-		    		}	
+			  		//map: {
+		        	//	inline: false
+		    		//}	
 			  	},
 			  		src: pathCSS,
 			  		dest: pathCSS
