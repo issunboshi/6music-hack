@@ -1,0 +1,17 @@
+.dock {
+  @include element;
+  background-color: rgba(blue, 0.5);
+}
+
+.item  {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background-color: rgba(red, 0.5);
+  cursor: pointer;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 999;
+}

@@ -4,14 +4,6 @@
 
 /* Mixins & variables */
 
-// Breakpoint mixins
-
-// Use these by including the breakpoint mixin:
-
-// @include breakpoint(breakpointname) {
-// 	Styles here
-// }
-
 @mixin breakpoint($point) {
 	@if $point == small {
 		@media only screen and (max-width : 719px) { @content ; }
@@ -114,4 +106,14 @@
 @mixin sans-b {
   font-family: Arial, sans-serif;
   font-weight: 700;
+}
+
+@mixin element($float: left) {
+  display: block;
+  position: relative;
+  float: $float;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  transform: translateY(-50%);
 }

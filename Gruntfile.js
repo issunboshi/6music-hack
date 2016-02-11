@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
 
-	var pathCSS 		= 'library/css/custom-style.css';
+	var pathCSS 		= 'library/css/style.css';
 	//var pathScss 		= "library/scss/custom-style.css";
 	var pathDefer_js	= "library/js/defer/defer.js";
 
@@ -123,10 +123,12 @@ module.exports = function (grunt) {
 				files: ["library/scss/*", "library/js/script.js", "index.html" ],	//Specify dir
 				//files: ["library/**/*"],								//all files inside dir
 				//files: ['!lib/dontwatch.js']							//!before/path means excluded
-				tasks: ["sass", "autoprefixer", "concat", "uglify", "notify_hooks"]
+				tasks: ["sass", "autoprefixer", "notify_hooks"]
 				//tasks: ["sass", "autoprefixer", "concat", "uglify", "newer:imagemin:img"]
-			}	
-			
+			},	
+			options: {
+    		  livereload: true,
+    		}
 		}
 	});
 
@@ -144,7 +146,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-newer');				//Must be last
 
 
-	grunt.registerTask("default", ['sass', 'autoprefixer', 'concat', 'uglify', 'notify_hooks']);
+	grunt.registerTask("default", ['sass', 'autoprefixer', 'notify_hooks']);
 	grunt.registerTask('img', ['newer:imageoptim:allImg']);
 	grunt.registerTask('preDeploy', ['imageoptim:allImg', 'uncss']);
 };
