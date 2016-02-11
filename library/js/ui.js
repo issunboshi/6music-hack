@@ -16,36 +16,19 @@ $(function() {
       }  
     }); 
   
-  
-  $('.audio-block').draggable({
-    
-        stop: function() {
+  	var item   = '.audio-block',
+  	    target = ".audio-target-container",
+  	    item_size = 75, 
+		top = (780/2 - (75/2)),
+		left = (1440/2 - (75/2)),
 
-          var  target = $(".audio-target"),
-               offset = target.offset(),
-               width = target.width(),
-               height = target.height(),
-          
-               centerX = offset.left + (width / 2),
-               centerY = offset.top + (height / 2);
-          
-          console.log(width);
-          
-          var item = $(this),
-              item_height = target.height();
-              
-          
-               //console.log("X position " + centerX);
-               //console.log("Y position " + centerY);
-               //console.log("item height " + item_height);
-               //console.log("item height /25 " + item_height/25);
-          
-           $(this).animate({ left: centerX, top: (item_height/2) });
-        } 
-          
-         //drag: function( event, ui ) {
-         //  ui.position.left = centerX;
-         //}  
-      //}
-  });
+		top1 	= top - item_size,
+        left1	= left - item_size; 
+
+    stop: function() {
+    	$( this ).animate({ top: top + "px", left: left + "px" });
+    	$(body).trigger('audio-selected', ["bass"]);
+ 	}  
+
+  	
 }); 

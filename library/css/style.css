@@ -1,6 +1,5 @@
 /* Imports */
 /* Mixins & variables */
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 * {
   margin: 0;
   padding: 0;
@@ -19,14 +18,17 @@ h1 {
 
 .main {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  background: #333333; }
 
 .audio-dock {
   position: relative;
   width: 20%;
   height: 100%;
-  float: left;
-  background: #3498db; }
+  float: left; }
+
+.audio-dock-cell {
+  height: 25vh; }
 
 .audio-target-container {
   position: relative;
@@ -35,15 +37,16 @@ h1 {
   float: left; }
   .audio-target-container .audio-target {
     position: relative;
+    top: 50%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    position: absolute;
     width: 80%;
     max-width: 600px;
     height: 80%;
     max-height: 600px;
-    fill: #000032;
-    z-index: -1; }
+    fill: #000032; }
 
 .dock {
   display: block;
@@ -60,11 +63,47 @@ h1 {
   position: relative;
   width: 150px;
   height: 150px;
-  padding: 5%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 999; }
   .audio-block .audio-block__svg {
-    width: 100%;
-    height: 100%; }
+    width: 80%;
+    height: 80%; }
+
+.audio-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: orange; }
+
+.bass {
+  background: #EF2D56; }
+
+.ep {
+  background: #2F52E0; }
+
+.flutes1 {
+  background: #61E8E1; }
+
+.flutes2 {
+  background: #ECC30B; }
+
+.hiPanel1 {
+  background: #00FFC5; }
+
+.hiPanel2 {
+  background: #9b59b6; }
+
+.loFlute {
+  background: #2ecc71; }
+
+.loPad {
+  background: #8e44ad; }
+
+.audio-target-container {
+  background-color: #000; }
 
 .target__image--dropped {
   background: yellow; }
