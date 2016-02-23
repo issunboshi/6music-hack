@@ -15,7 +15,10 @@ function audioAPI () {
           loPad: [448000, 512000],
           sineHi: [512000, 576000]
       },
-      loop: true
+      loop: true,
+      onload: function() {
+          $('body').fadeIn('200');
+      }
     });
 
 
