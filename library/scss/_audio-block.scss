@@ -1,0 +1,60 @@
+.dock {
+  @include element;
+  background-color: rgba(blue, 0.5);
+}
+
+.audio-block  {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 999;
+  // padding: 5%;
+  // z-index: 999;
+
+  .audio-block__svg {
+    width: 80%;
+    height: 80%;
+  }
+}
+.audio-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: orange;
+}
+
+.bass {
+  background: #EF2D56;
+}
+
+.ep {
+  background: #2F52E0;
+}
+
+.flutes1 {
+  background: #61E8E1;
+}
+
+.flutes2 {
+  background: #ECC30B;
+}
+
+.hiPanel1 {
+  background: #00FFC5;
+}
+
+.hiPanel2 {
+  background: #9b59b6;
+}
+
+.loFlute {
+  background: #2ecc71;
+}
+
+.loPad {
+  background: #8e44ad;
+}

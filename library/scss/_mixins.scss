@@ -1,0 +1,120 @@
+/* Imports */
+
+//@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/* Mixins & variables */
+
+@mixin breakpoint($point) {
+	@if $point == small {
+		@media only screen and (max-width : 719px) { @content ; }
+	}
+	@else if $point == medium {
+		@media only screen and (min-width : 720px) { @content ; }
+	}
+  @else if $point == medium_m {
+    @media only screen and (min-width : 950px) { @content ; }
+  }
+	@else if $point == large {
+		@media only screen and (min-width : 1024px) { @content ; }
+	}
+}
+
+// Layout tools
+
+@mixin v-a {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin v-r {
+  position: relative;
+  top: 0%;
+  transform: translateY(-0%);
+}
+
+@mixin h-a {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin hv-a {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin trans($time: 0.2s) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin hover{
+  transform: translateY(-5px);
+} 
+
+@mixin br($radius) {
+  border-radius: ($radius);
+}
+
+@mixin image--fs {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1; 
+}
+
+@mixin video--fs {
+    position: relative; 
+    padding-bottom: 56.25%; //16:9 
+    height: 0; 
+
+  & iframe { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+  }
+}
+
+//Fonts
+
+@mixin sans-l {
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+}
+
+@mixin sans-r {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin sans-b {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+@mixin element($float: left) {
+  display: block;
+  position: relative;
+  float: $float;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+}
