@@ -3,7 +3,7 @@ function audioAPI () {
         methods;
 
     sounds = new Howl({
-      urls: ['../library/audio/mergedtracks.mp3'],
+      urls: ['library/audio/mergedtracks.mp3'],
       sprite: {
           bass: [0, 64000],
           ep: [64000, 128000],
